@@ -36,6 +36,7 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 /**
@@ -259,7 +260,14 @@ public class Anagrams extends JFrame {
     }//GEN-LAST:event_nextTrialActionPerformed
 
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
-        System.exit(0);
+        int response = JOptionPane.showConfirmDialog(
+                    this,                              // owner
+                    "You are going to leave",                      // message
+                    "Really want to exit?",                     // title
+                    JOptionPane.YES_NO_OPTION);         // optionType
+        if (response == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void guessedWordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guessedWordActionPerformed
@@ -275,7 +283,14 @@ public class Anagrams extends JFrame {
     }//GEN-LAST:event_guessedWordActionPerformed
 
     private void exitForm(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_exitForm
-        System.exit(0);
+        int response = JOptionPane.showConfirmDialog(
+                    this,                              // owner
+                    "You are going to leave",                      // message
+                    "Really want to exit?",                     // title
+                    JOptionPane.YES_NO_OPTION);         // optionType
+        if (response == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
     }//GEN-LAST:event_exitForm
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
